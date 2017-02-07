@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- 分类导航 -->
+    <view class="nav-block wrap">
+        <block wx:for="{{navItems}}"> 
+          <view class="wrap-item {{item.isSplot ? 'exp' : ''}}">  
+            <navigator url="../components/{{item.url}}/{{item.url}}" hover-class="navigator-hover">{{item.name}}</navigator>
+          </view>
+        </block>
+    </view>
+
+    <view class="text">
+        <view class="line_y"></view>
+        <text>综合资讯</text>
+    </view>
+    <block wx:for-items="{{items}}">
+        <view class="item_left">
+            <image class="image" src="{{item.image}}"/>
+        </view>
+        <view class="flex_auto item_middle">
+            <view><text class="title">{{item.title}}</text></view>
+            <view><text class="sub_title">{{item.sub_title}}</text></view>
+        </view>
+  </block>
+</view>
