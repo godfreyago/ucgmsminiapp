@@ -13,13 +13,13 @@
         <view class="line_y"></view>
         <text>综合资讯</text>
     </view>
-    <block wx:for-items="{{items}}">
+    <view class="flex item" wx:for-items="{{items}}">
         <view class="item_left">
             <image class="image" src="{{item.image}}"/>
         </view>
-        <view class="flex_auto item_middle">
+        <view class="item_middle">
             <view><text class="title">{{item.title}}</text></view>
             <view><text class="sub_title">{{item.sub_title}}</text></view>
         </view>
-  </block>
+  </view>
 </view>

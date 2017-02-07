@@ -39,13 +39,13 @@ Page( {
     items: [
       {title:'统一授信',
       sub_title:'上线',
-      image:''},
+      image:'../../../images/gift.png'},
       {title:'统一授信',
       sub_title:'上线',
-      image:''},
+      image:'../../../images/beauty.png'},
       {title:'统一授信',
       sub_title:'上线',
-      image:''}
+      image:'../../../images/house.png'}
     ]
   },
 
