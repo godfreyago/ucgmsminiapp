@@ -108,7 +108,7 @@ view.text text {
   color: #333;
 }
 
-.item-middle .sub_title {
+.item-middle .sub-title {
   font-size: 12px;
   color: #666;
   margin: 2px 0px;

@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/ucgms/index/index"
+    "pages/ucgms/index/index",
+    "pages/ucgms/index/information"
   ],
   "window":{
     "backgroundTextStyle":"light",

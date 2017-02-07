@@ -37,15 +37,24 @@ Page( {
       }
     ],
     items: [
-      {title:'统一授信',
-      sub_title:'上线',
-      image:'../../../images/gift.png'},
-      {title:'统一授信',
-      sub_title:'上线',
-      image:'../../../images/beauty.png'},
-      {title:'统一授信',
-      sub_title:'上线',
-      image:'../../../images/house.png'}
+      {
+        _id : '001',
+        title : '统一授信1',
+        sub_title : '上线1',
+        image : '../../../images/credit_cards.png'
+      },
+      {
+        _id : '002',
+        title : '统一授信2',
+        sub_title : '上线2',
+        image : '../../../images/credit_cards-2.png'
+      },
+      {
+        _id : '003',
+        title : '统一授信3',
+        sub_title : '上线3',
+        image : '../../../images/credit_card-3.png'
+      }
     ]
   },
 

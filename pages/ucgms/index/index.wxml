@@ -13,13 +13,15 @@
         <view class="line_y"></view>
         <text>综合资讯</text>
     </view>
-    <view class="flex item" wx:for-items="{{items}}">
-        <view class="item_left">
-            <image class="image" src="{{item.image}}"/>
-        </view>
-        <view class="item_middle">
-            <view><text class="title">{{item.title}}</text></view>
-            <view><text class="sub_title">{{item.sub_title}}</text></view>
-        </view>
+    <view class="item" wx:for-items="{{items}}">
+        <navigator class="flex" url="information?title={{item.title}}&id={{item._id}}">
+            <view class="item-left">
+                <image class="image" src="{{item.image}}"/>
+            </view>
+            <view class="item-middle">
+                <view><text class="title">{{item.title}}</text></view>
+                <view><text class="sub-title">{{item.sub_title}}</text></view>
+            </view>
+        </navigator>
   </view>
 </view>
