@@ -6,7 +6,9 @@ Page({
     console.log(options)
     this.setData({
       title: options.title,
-      id:options.id
+      id:options.id,
+      content:options.content,
+      headimage:options.headimage
     })
     var that = this    
     

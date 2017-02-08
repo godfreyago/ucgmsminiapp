@@ -1,0 +1,39 @@
+.art-header{
+    width: 100%;
+    height: 219px;
+    color: #FFF;
+}
+
+.art-img{
+    width: 100%;
+    height: 219px;
+}
+
+.title {
+    width: 100%
+}
+
+.line_y {
+  width: 3px;
+  height: 25px;
+  display: inline-block;
+  background-color: #09bb07;
+  margin-left: 3px;
+}
+
+.art-title {
+  color: #444444;
+  margin-left: 10px;
+  line-height: 25px;
+  font-size: 25px;
+}
+
+.art-content{
+    font-size: 14px;
+    color: #616466;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+    background-color: #FFF;
+    line-height: 1.5;
+}

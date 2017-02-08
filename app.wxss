@@ -23,3 +23,4 @@ page {
 .flex-wrap.flex-direction-row{
   flex-direction: row;
 }
+

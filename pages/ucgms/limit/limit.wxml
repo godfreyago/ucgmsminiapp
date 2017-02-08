@@ -1,0 +1,25 @@
+<view class="page">
+	<view class="page__hd">
+	    <text class="page__title">非零售统一授信额度查询</text>
+	    <text class="page__desc">查询条件：</text>
+    </view>
+    <view class="page__bd">
+	    <view class="section">
+	    	<input bindchange="bindCustomerIdChange" type="number" placeholder="客户代码" auto-focus/>
+	    </view>
+	    <view class="section">
+	    	<input bindchange="bindCustomerNameChange" type="text" placeholder="客户名称" />
+	    </view>
+	    <view class="section">
+			<picker bindchange="bindOrgPickerChange" value="{{orgindex}}" range="{{organization}}">
+			<view class="picker">经办机构：{{organization[orgindex]}}</view>
+			</picker>
+	    </view>
+		<view class="section">
+			<picker bindchange="bindLinePickerChange" value="{{lineindex}}" range="{{line}}">
+				<view class="picker">业务条线：{{line[lineindex]}}</view>
+			</picker>
+		</view>
+	</view>
+	<button bindtap="bindSearch" type="primary">查询</button>
+</view>

@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/ucgms/index/index",
-    "pages/ucgms/index/information"
+    "pages/ucgms/details/details",
+    "pages/ucgms/limit/limit",
+    "pages/ucgms/limit/limitdetail"
   ],
   "window":{
     "backgroundTextStyle":"light",

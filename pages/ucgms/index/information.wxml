@@ -1,7 +1,0 @@
-<view class="page">
-    <view >
-        <text >详情：</text>
-        <text>{{title}} </text>
-        <text>{{id}}</text>
-    </view>
-</view>

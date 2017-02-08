@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="art-header">
+    	<image src="{{headimage}}" class="art-img"/>
+    </view>
+    <view class="title">
+        <view class="line_y"></view>
+        <text class="art-title">{{title}}</text>
+    </view>
+    <view class="art-content">{{content}}</view>
+</view>

@@ -4,7 +4,7 @@
     <view class="nav-block wrap">
         <block wx:for="{{navItems}}"> 
           <view class="wrap-item {{item.isSplot ? 'exp' : ''}}">  
-            <navigator url="../components/{{item.url}}/{{item.url}}" hover-class="navigator-hover">{{item.name}}</navigator>
+            <navigator url="{{item.url}}" hover-class="navigator-hover">{{item.name}}</navigator>
           </view>
         </block>
     </view>
@@ -14,7 +14,7 @@
         <text>综合资讯</text>
     </view>
     <view class="item" wx:for-items="{{items}}">
-        <navigator class="flex" url="information?title={{item.title}}&id={{item._id}}">
+        <navigator class="flex" url="../details/details?title={{item.title}}&id={{item._id}}&content={{item.content}}&headimage={{item.headimage}}">
             <view class="item-left">
                 <image class="image" src="{{item.image}}"/>
             </view>
