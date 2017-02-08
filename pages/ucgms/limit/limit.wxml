@@ -1,25 +1,45 @@
 <view class="page">
 	<view class="page__hd">
 	    <text class="page__title">非零售统一授信额度查询</text>
-	    <text class="page__desc">查询条件：</text>
     </view>
     <view class="page__bd">
-	    <view class="section">
-	    	<input bindchange="bindCustomerIdChange" type="number" placeholder="客户代码" auto-focus/>
-	    </view>
-	    <view class="section">
-	    	<input bindchange="bindCustomerNameChange" type="text" placeholder="客户名称" />
-	    </view>
-	    <view class="section">
-			<picker bindchange="bindOrgPickerChange" value="{{orgindex}}" range="{{organization}}">
-			<view class="picker">经办机构：{{organization[orgindex]}}</view>
-			</picker>
-	    </view>
-		<view class="section">
-			<picker bindchange="bindLinePickerChange" value="{{lineindex}}" range="{{line}}">
-				<view class="picker">业务条线：{{line[lineindex]}}</view>
-			</picker>
+	    <!--客户代码-->
+		<view class="text-type">
+			<text class="left-text">客户代码</text>
+			<input name="custCode" class="right-text" placeholder="{{custCodeHolder}}" auto-focus/>
 		</view>
+		<!--客户名称-->
+		<view class="text-type">
+			<text class="left-text">客户名称</text>
+			<input name="custName" class="right-text" placeholder="{{custNameHolder}}" auto-focus/>
+		</view>
+
+		<!--经办机构-->
+		<view class="text-type">
+			<text class="left-text">经办机构</text>
+			<view class="right-text">{{organization}}</view>
+			<action-sheet hidden="{{orgSheetHidden}}" bindchange="orgSheetChange">
+			    <view wx:for-items="{{organizations}}">
+			        <action-sheet-item class="item-list" id="{{item._id+','+item.name}}" bindtap="orgSheetItemTap">{{item.name}}</action-sheet-item>
+			    </view>
+			</action-sheet>
+			<icon type="search" bindtap="orgSheetTap" size="20"/>			
+		</view>
+		<!--业务条线-->
+		<view class="text-type">
+			<text class="left-text">业务条线</text>
+			<view class="right-text">{{line}}</view>
+			<action-sheet hidden="{{lineSheetHidden}}" bindchange="lineSheetChange">
+			    <view wx:for-items="{{lines}}">
+			        <action-sheet-item class="item-list" id="{{item._id+','+item.name}}" bindtap="lineSheetItemTap">{{item.name}}</action-sheet-item>
+			    </view>
+			</action-sheet>
+			<icon type="search" bindtap="lineSheetTap" size="20"/>			
+		</view>
+
 	</view>
-	<button bindtap="bindSearch" type="primary">查询</button>
+
+	<button class="button-type" bindtap="bindSearch" type="primary">查询</button>
+	<button class="button-type" bindtap="bindCancel" type="default">取消</button>
+
 </view>

@@ -1,5 +1,5 @@
 .page__hd{
-    padding: 50rpx 50rpx 100rpx 50rpx;
+    padding: 50rpx 50rpx 20rpx 50rpx;
     text-align: center;
 }
 .page__title{
@@ -9,21 +9,31 @@
     color: #AAAAAA;
     border-bottom: 1px solid #CCCCCC;
 }
-.page__desc{
-    display: none;
+.page__bd{
+    padding-bottom: 30rpx;
+}
+
+.text-type{
+    display: flex;
+    white-space: nowrap;
+    padding: 16rpx 0;
+    border-bottom: 1rpx solid #eee;
+    margin-top: 30rpx;
+    background-color: white;
+}
+.text-type .left-text{
+    margin-left: 50rpx; 
+    font-size: 32rpx;
+    color: #000000;
+}
+.text-type .right-text{
+    font-size: 32rpx;
+    text-align: left;
+    margin-left: 50rpx;
+    width: 300rpx;
+    color: #888;
+}
+
+.button-type {
     margin-top: 20rpx;
-    font-size: 26rpx;
-    color: #BBBBBB;
-}
-
-.input{
-	background-color: #FFFFFF;
-}
-.section{
-    margin-bottom: 10rpx;
-}
-
-.picker{
-  padding: 26rpx;
-  background-color: #FFFFFF;
 }
