@@ -32,7 +32,7 @@ Page( {
         isSplot:true
       },
       {
-        name:'用户操作',
+        name:'用户管理',
         url:'bill'
       }
     ],
