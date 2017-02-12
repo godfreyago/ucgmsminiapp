@@ -33,7 +33,7 @@ Page({
 				currencyID:"10",
 				currency:"人民币",
 				approvalLimit:"600000000",
-				usedLimit:"300000000"，
+				usedLimit:"300000000",
 				updator:"唐虹"
 			}
 		],
@@ -91,7 +91,7 @@ Page({
 				usedLimit:"150000000",
 				updator:"唐虹"
 			}
-		]
+		],
 		dishesList:[
 			[
 				{

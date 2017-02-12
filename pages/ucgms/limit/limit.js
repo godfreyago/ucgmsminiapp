@@ -107,9 +107,10 @@ Page({
     })
   },
   bindSearch: function(e) {
-
+    console.log(this.data);
     wx.navigateTo({
-      url: "limitdetail?customerId=" + this.data.customerId+"&customerName="+ this.data.customerName+"&org="+this.data.organization[this.data.orgindex]+"&line="+this.data.line[this.data.lineindex],
+      //url: 'limitdetail'
+      url: "limitdetail?customerId=" + this.data.customerId+"&customerName="+ this.data.customerName+"&org="+this.data.organization[this.data.orgindex]+"&line="+this.data.line[this.data.lineindex]
     });
   }
 })
