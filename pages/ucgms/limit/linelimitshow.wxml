@@ -1,0 +1,79 @@
+<view class="page">
+	<view class="page__hd">
+        <view class="page__title">{{showlimit.customerName}}</view>
+        <view class="page__desc">单一客户额度详情展示</view>
+    </view>
+    <view class="page__bd">
+        <view class="preview">
+            <view class="preview__hd">
+            	<view class="preview__item">
+                    <view class="preview__label">客户代码</view>
+                    <view class="preview__value_in-hd">{{showlimit.customerID}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">所属集团代码</view>
+                    <view class="preview__value_in-hd">{{showlimit.groupID}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">所属集团名称</view>
+                    <view class="preview__value_in-hd">{{showlimit.groupName}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">额度有权维护机构</view>
+                    <view class="preview__value_in-hd">{{showlimit.orgName}}</view>
+                </view>
+            </view>
+            <view class="preview__bd">
+                <view class="preview__item">
+                    <view class="preview__label">币种</view>
+                    <view class="preview__value">{{showlimit.currency}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">汇率</view>
+                    <view class="preview__value">{{showlimit.exchangeRate}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">业务条线</view>
+                    <view class="preview__value">{{showlimit.line}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">审批金额</view>
+                    <view class="preview__value">{{showlimit.approvalLimit}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">已用额度</view>
+                    <view class="preview__value">{{showlimit.usedLimit}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">审批敞口</view>
+                    <view class="preview__value">{{showlimit.approvalRisk}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">已用敞口</view>
+                    <view class="preview__value">{{showlimit.usedRisk}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">备注</view>
+                    <view class="preview__value">{{showlimit.description}}</view>
+                </view>
+            </view>
+            <view class="preview__bd">
+            	<view class="preview__item">
+                    <view class="preview__label">更新人</view>
+                    <view class="preview__value">{{showlimit.updator}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">更新人机构</view>
+                    <view class="preview__value">{{showlimit.updatorOrg}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">更新时间</view>
+                    <view class="preview__value">{{showlimit.updateTime}}</view>
+                </view>
+            </view>
+	        <view class="preview__ft">
+	        	<button class="button-type" bindtap="bindCancel" type="default">返回</button>
+	        </view>
+        </view>
+    </view>
+</view>
