@@ -6,18 +6,18 @@
 	    <!--客户代码-->
 		<view class="text-type">
 			<text class="left-text">客户代码</text>
-			<input name="custCode" class="right-text" placeholder="{{custCodeHolder}}" auto-focus/>
+			<input name="custCode" class="right-text" placeholder="{{custCodeHolder}}" bindinput="custCodeInput" auto-focus/>
 		</view>
 		<!--客户名称-->
 		<view class="text-type">
 			<text class="left-text">客户名称</text>
-			<input name="custName" class="right-text" placeholder="{{custNameHolder}}" auto-focus/>
+			<input name="custName" class="right-text" placeholder="{{custNameHolder}}" bindinput="custNameInput" auto-focus/>
 		</view>
 
 		<!--经办机构-->
 		<view class="text-type">
 			<text class="left-text">经办机构</text>
-			<view class="right-text">{{organization}}</view>
+			<input class="right-text" name="organization" value="{{organization}}" />	
 			<action-sheet hidden="{{orgSheetHidden}}" bindchange="orgSheetChange">
 			    <view wx:for-items="{{organizations}}">
 			        <action-sheet-item class="item-list" id="{{item._id+','+item.name}}" bindtap="orgSheetItemTap">{{item.name}}</action-sheet-item>
@@ -28,7 +28,7 @@
 		<!--业务条线-->
 		<view class="text-type">
 			<text class="left-text">业务条线</text>
-			<view class="right-text">{{line}}</view>
+			<input class="right-text" name="line" value="{{line}}" />	
 			<action-sheet hidden="{{lineSheetHidden}}" bindchange="lineSheetChange">
 			    <view wx:for-items="{{lines}}">
 			        <action-sheet-item class="item-list" id="{{item._id+','+item.name}}" bindtap="lineSheetItemTap">{{item.name}}</action-sheet-item>

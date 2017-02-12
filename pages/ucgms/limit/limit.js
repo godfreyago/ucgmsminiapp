@@ -2,8 +2,8 @@ Page({
   data: {
     orgSheetHidden: true,
     lineSheetHidden: true,
-    customerId: 0,
-    customerName: 0,
+    custCode: '',
+    custName: '',
     custCodeHolder: '请填写客户代码',
     custNameHolder: '请填写客户名称',
     organization: '请选择经办机构',
@@ -39,6 +39,16 @@ Page({
       _id: '3',
       name: '零售业务'
     }]
+  },
+  custCodeInput: function(e) {
+    this.setData({
+      custCode:e.detail.value
+    })
+  },
+  custNameInput: function(e) {
+    this.setData({
+      custName:e.detail.value
+    })
   },
   orgSheetChange: function(e) {
     this.setData({
@@ -83,13 +93,13 @@ Page({
     })
   },
   bindCustomerIdChange: function(e) {
-    console.log('customerId发送输入，携带值为', e.detail.value)
+    console.log('custId发送输入，携带值为', e.detail.value)
     this.setData({
       customerId: e.detail.value
     })
   },
   bindCustomerNameChange: function(e) {
-    console.log('customerName发送输入，携带值为', e.detail.value)
+    console.log('custName发送输入，携带值为', e.detail.value)
     this.setData({
       customerName: e.detail.value
     })
@@ -107,10 +117,9 @@ Page({
     })
   },
   bindSearch: function(e) {
-    console.log(this.data);
+    //console.log(this.data);
     wx.navigateTo({
-      //url: 'limitdetail'
-      url: "limitdetail?customerId=" + this.data.customerId+"&customerName="+ this.data.customerName+"&org="+this.data.organization[this.data.orgindex]+"&line="+this.data.line[this.data.lineindex]
+      url: "limitdetail?custCode=" + this.data.custCode+"&custName="+ this.data.custName+"&organizationId="+this.data.organizationId+"&lineId="+this.data.lineId
     });
   }
 })

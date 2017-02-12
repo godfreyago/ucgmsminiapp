@@ -2,28 +2,11 @@ var app = getApp()
 Page({
 	data: {
 		hidden:true,
-		curNav:1,
-		curIndex:0,
+		currentTab:0,
 		cart:[],
-		cartTotal:0,
-		navList:[
-			{
-				limitId:1,
-				name:'客户额度'
-			},
-			{
-				limitId:2,
-				name:'条线额度'
-			},
-			{
-				limitId:3,
-				name:'机构额度'
-			},
-			{
-				limitId:4,
-				name:'品种额度'
-			}
-		],
+		cartTotal:0, 
+    	winWidth: 0,  
+    	winHeight: 0,  
 		customerLimit:[
 			{
 				customerID:"74959946-5",
@@ -140,35 +123,40 @@ Page({
 			})
 		},1000)
 	},
-	selectNav (event) {
-		let id = event.target.dataset.id,
-			index = parseInt(event.target.dataset.index);
-			self = this;
+	swichNav: function( e ) {  
+      	var that = this;  
+      	if( this.data.currentTab === e.target.dataset.current ) {  
+      		return false;  
+    	} else {  
+      		that.setData( {  
+        		currentTab: e.target.dataset.current  
+      		})  
+    	}  
+  	},
+  	bindChange: function( e ) {  
+    	var that = this;  
+    	that.setData( { currentTab: e.detail.current });  
+  	},  
+	onLoad: function(e) {
+		var that = this;  
+	    /** 
+	     * 获取系统信息 
+	     */  
+	    wx.getSystemInfo( {  	  
+	      success: function( res ) {  
+	        that.setData( {  
+	          winWidth: res.windowWidth,  
+	          winHeight: res.windowHeight  
+	        });  
+	      }  
+	    });  
+
 		this.setData({
-			curNav:id,
-			curIndex:index
-		})
-	},
-	// 选择菜品
-	selectDish (event) {
-		let dish = event.currentTarget.dataset.dish;
-		let flag = true;
-		let	cart = this.data.cart;
-		
-		if(cart.length > 0){
-			cart.forEach(function(item,index){
-				if(item == dish){
-					cart.splice(index,1);
-					flag = false;
-				}
-			})
-		}
-		if(flag) cart.push(dish);
-		this.setData({
-			cartTotal:cart.length
-		})
-	},
-	onLoad () {
-		
+			customerID: e.custCode,
+			customerName: e.custName,
+			organizationId:e.organizationId,
+			lineId: e.lineId
+		});
+    	console.log(this.data);
 	}
 })

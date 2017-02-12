@@ -24,7 +24,7 @@ Page( {
       },
       {
         name:'缓释',
-        url:'bill'
+        url:'../limit/limitdetail'
       },
       {
         name:'客户统一视图',
