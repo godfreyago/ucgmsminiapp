@@ -53,8 +53,7 @@
 .text-type{
     display: flex;
     white-space: nowrap;
-    padding: 16rpx 0;
-    border-bottom: 1rpx solid #eee;
-    margin-top: 30rpx;
-    background-color: white;
+    font-size: 25rpx;
+    color: #888;
+    padding: 5rpx 10px;
 } 
