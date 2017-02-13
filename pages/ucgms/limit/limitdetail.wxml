@@ -14,11 +14,11 @@
             <view class="right-text">{{orgName}}</view>
         </view>
         <view class="text-type">
-            <view class="left-text">审批额度</view>
-            <view class="right-text">{{currency}}{{approvalLimit}}</view>
+            <view class="left-text">客户审批额度</view>
+            <view class="right-text">{{approvalLimit}}</view>
         </view>
         <view class="text-type">
-            <view class="left-text">已用额度</view>
+            <view class="left-text">客户已用额度</view>
             <view class="right-text">{{300000000}}</view>
         </view>
     </view>
