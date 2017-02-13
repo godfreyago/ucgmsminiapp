@@ -6,7 +6,9 @@
     "pages/ucgms/details/details",
     "pages/ucgms/limit/limit",
     "pages/ucgms/limit/limitdetail",
-    "pages/ucgms/limit/linelimitshow"
+    "pages/ucgms/limit/linelimitshow",
+    "pages/ucgms/limit/orglimitshow",
+    "pages/ucgms/limit/busilimitshow"
   ],
   "window":{
     "backgroundTextStyle":"light",

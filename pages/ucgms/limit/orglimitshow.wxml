@@ -1,7 +1,7 @@
 <view class="page">
 	<view class="page__hd">
         <view class="page__title">{{showlimit.customerName}}</view>
-        <view class="page__desc">条线额度详情展示</view>
+        <view class="page__desc">机构额度详情展示</view>
     </view>
     <view class="page__bd">
         <view class="preview">
@@ -35,6 +35,10 @@
                 <view class="preview__item">
                     <view class="preview__label">业务条线</view>
                     <view class="preview__value">{{showlimit.line}}</view>
+                </view>
+                <view class="preview__item">
+                    <view class="preview__label">经办机构</view>
+                    <view class="preview__value">{{showlimit.orgName}}</view>
                 </view>
                 <view class="preview__item">
                     <view class="preview__label">审批金额</view>

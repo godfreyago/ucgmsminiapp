@@ -1,7 +1,7 @@
 var app = getApp()
 Page({
 	data:{
-		customerLimit:[
+		busiLimit:[
 			{
 				customerID:"74959946-5",
 				customerName:"百联集团有限公司",
@@ -12,34 +12,14 @@ Page({
 				currencyID:"10",
 				currency:"人民币",
 				exchangeRate:"1.0",
-				approvalLimit:"600000000",
-				usedLimit:"300000000",
-				approvalRisk:"600000000",
-				usedRisk:"300000000",
-				updator:"唐虹",
-				updateOrgID:"1034",
-				updatorOrg:"重庆分行",
-				updateTime:"2016-12-31 15:18:10",
-				description:""
-			}
-		],
-		lineLimit:[
-			{
-				customerID:"74959946-5",
-				customerName:"百联集团有限公司",
-				groupID:"GL1234567890",
-				groupName:"百联集团有限公司",
-				orgID:"1034",
-				orgName:"重庆分行",
-				currencyID:"10",
-				currency:"人民币",
-				exchangeRate:"1.0",
-				lineID:"1",
+				lineID:"2",
 				line:"企金条线",
-				approvalLimit:"600000000",
-				usedLimit:"200000000",
-				approvalRisk:"600000000",
-				usedRisk:"200000000",
+				busiID:"5302",
+				busiName:"同业投资",
+				approvalLimit:"200000000",
+				usedLimit:"100000000",
+				approvalRisk:"200000000",
+				usedRisk:"100000000",
 				updator:"唐虹",
 				updateOrgID:"1034",
 				updatorOrg:"重庆分行",
@@ -51,21 +31,47 @@ Page({
 				customerName:"百联集团有限公司",
 				groupID:"GL1234567890",
 				groupName:"百联集团有限公司",
-				orgID:"1021",
-				orgName:"上海分行",
+				orgID:"1011",
+				orgName:"福州分行",
 				currencyID:"10",
 				currency:"人民币",
 				exchangeRate:"1.0",
 				lineID:"2",
-				line:"金融市场",
+				line:"企金市场",
+				busiID:"1101",
+				busiName:"流动资金贷款",
+				approvalLimit:"400000000",
+				usedLimit:"150000000",
+				approvalRisk:"400000000",
+				usedRisk:"100000000",
+				updator:"娜美",
+				updateOrgID:"1011",
+				updatorOrg:"福州分行",
+				updateTime:"2016-1-17 11:45:37",
+				description:""
+			},
+			{
+				customerID:"74959946-5",
+				customerName:"百联集团有限公司",
+				groupID:"GL1234567890",
+				groupName:"百联集团有限公司",
+				orgID:"1011",
+				orgName:"福州分行",
+				currencyID:"10",
+				currency:"人民币",
+				exchangeRate:"1.0",
+				lineID:"2",
+				line:"企金市场",
+				busiID:"5301",
+				busiName:"同业投资(CFP通道)",
 				approvalLimit:"600000000",
-				usedLimit:"300000000",
+				usedLimit:"150000000",
 				approvalRisk:"600000000",
-				usedRisk:"300000000",
-				updator:"路飞",
-				updateOrgID:"1021",
-				updatorOrg:"上海分行",
-				updateTime:"2017-2-1 8:20:10",
+				usedRisk:"150000000",
+				updator:"索隆",
+				updateOrgID:"1011",
+				updatorOrg:"福州分行",
+				updateTime:"2016-12-31 15:20:10",
 				description:""
 			}
 		]
@@ -73,8 +79,8 @@ Page({
 	onLoad: function (e) {
 		var cur=-1;
 		console.log(e);
-		for (var i = 0; i < this.data.lineLimit.length; i++) {
-			if(this.data.lineLimit[i].customerID==e.customerID&&this.data.lineLimit[i].lineID==e.lineID){
+		for (var i = 0; i < this.data.busiLimit.length; i++) {
+			if(this.data.busiLimit[i].customerID==e.customerID&&this.data.busiLimit[i].lineID==e.lineID&&this.data.busiLimit[i].orgID==e.orgID&&this.data.busiLimit[i].busiID==e.busiID){
 				cur=i;
 			}
 		}
@@ -90,7 +96,7 @@ Page({
         	});
 		} else {
 			this.setData({
-				showlimit:this.data.lineLimit[cur]
+				showlimit:this.data.busiLimit[cur]
 			});
 		}
 	},

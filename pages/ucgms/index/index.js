@@ -15,7 +15,7 @@ Page( {
       },
       {
         name:'业务信息',
-        url:'../limit/linelimitshow',
+        url:'',
         isSplot:true
       },
       {
