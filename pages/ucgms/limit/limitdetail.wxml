@@ -1,8 +1,26 @@
 <view class="page">
 	<!-- top aside -->
 	<view class="page__hd">
-        <view class="page__title">Panel</view>
-        <view class="page__desc">面板</view>
+        <view class="text-type">
+            <view class="left-text">客户代码</view>
+            <view class="right-text">{{customerID}}</view>
+        </view>
+        <view class="text-type">
+            <view class="left-text">客户名称</view>
+            <view class="right-text">{{customerName}}</view>
+        </view>
+        <view class="text-type">
+            <view class="left-text">经办机构</view>
+            <view class="right-text">{{orgName}}</view>
+        </view>
+        <view class="text-type">
+            <view class="left-text">审批额度</view>
+            <view class="right-text">{{currency}}{{approvalLimit}}</view>
+        </view>
+        <view class="text-type">
+            <view class="left-text">已用额度</view>
+            <view class="right-text">{{300000000}}</view>
+        </view>
     </view>
 	
 	<view class="page__bd">

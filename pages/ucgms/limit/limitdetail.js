@@ -7,19 +7,15 @@ Page({
 		cartTotal:0, 
     	winWidth: 0,  
     	winHeight: 0,  
-		customerLimit:[
-			{
-				customerID:"74959946-5",
-				customerName:"百联集团有限公司",
-				orgID:"1034",
-				orgName:"重庆分行",
-				currencyID:"10",
-				currency:"人民币",
-				approvalLimit:"600000000",
-				usedLimit:"300000000",
-				updator:"唐虹"
-			}
-		],
+		customerID:"74959946-5",
+		customerName:"百联集团有限公司",
+		orgID:"1034",
+		orgName:"重庆分行",
+		currencyID:"10",
+		currency:"RMB",
+		approvalLimit:"600000000",
+		usedLimit:"300000000",
+		updator:"唐虹",
 		lineLimit:[
 			{
 				customerID:"74959946-5",
@@ -43,8 +39,20 @@ Page({
 				currency:"人民币",
 				lineID:"2",
 				line:"金融市场",
-				approvalLimit:"600000000",
+				approvalLimit:"500000000",
 				usedLimit:"300000000"
+			},
+			{
+				customerID:"74959946-5",
+				customerName:"百联集团有限公司",
+				orgID:"1034",
+				orgName:"重庆分行",
+				currencyID:"10",
+				currency:"人民币",
+				lineID:"3",
+				line:"零售条线",
+				approvalLimit:"300000000",
+				usedLimit:"100000000"
 			}
 		],
 		orgLimit:[
