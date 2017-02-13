@@ -32,11 +32,38 @@
 		    </swiper-item>  
 		    <!-- 机构额度 -->  
 		    <swiper-item>  
-		      <view>机构额度</view>  
+		      <view class="weui-panel weui-panel_access">
+	            <view class="weui-panel__bd">
+	                <view class="weui-media-box weui-media-box_text" wx:for-items="{{orgLimit}}">
+	                    <view class="weui-media-box__title weui-media-box__title_in-text">{{item.orgName}}</view>
+	                    <view class="text-type">业务条线：{{item.line}}</view>
+	                    <view class="text-type">审核额度：{{item.approvalLimit}}</view>
+	                    <view class="text-type">已用额度：{{item.usedLimit}}</view>
+	                    <navigator url="linelimitshow?customerID={{item.customerID}}&orgID={{item.orgID}}&lineID={{item.lineID}}" class="weui-cell weui-cell_access">
+	                      <view class="weui-cell__bd weui-cell_link">查看更多</view>
+                          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+	                	</navigator>
+	                </view>
+	            </view>
+	          </view>
 		    </swiper-item>  
 		    <!-- 品种额度 -->  
 		    <swiper-item>  
-		      <view>品种额度</view>  
+		      <view class="weui-panel weui-panel_access">
+	            <view class="weui-panel__bd">
+	                <view class="weui-media-box weui-media-box_text" wx:for-items="{{busiLimit}}">
+	                    <view class="weui-media-box__title weui-media-box__title_in-text">{{item.busiName}} - {{item.busiID}}</view>
+	                    <view class="text-type">业务条线：{{item.line}}</view>
+	                    <view class="text-type">经办机构：{{item.orgName}}</view>
+	                    <view class="text-type">审核额度：{{item.approvalLimit}}</view>
+	                    <view class="text-type">已用额度：{{item.usedLimit}}</view>
+	                    <navigator url="linelimitshow?customerID={{item.customerID}}&orgID={{item.orgID}}&lineID={{item.lineID}}&busiID{{item.busiID}}" class="weui-cell weui-cell_access">
+	                      <view class="weui-cell__bd weui-cell_link">查看更多</view>
+                          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+	                	</navigator>
+	                </view>
+	            </view>
+	          </view>
 		    </swiper-item>  
 		</swiper>  
 
