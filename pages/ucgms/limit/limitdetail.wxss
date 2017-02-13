@@ -60,9 +60,9 @@
     color: #000000;
 }
 .text-type .right-text{
-    font-size: 32rpx;
+    font-size: 30rpx;
     text-align: left;
     margin-left: 50rpx;
     width: 300rpx;
-    color: #888;
+    color: #666;
 }

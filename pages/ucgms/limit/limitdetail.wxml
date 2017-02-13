@@ -10,7 +10,7 @@
             <view class="right-text">{{customerName}}</view>
         </view>
         <view class="text-type">
-            <view class="left-text">经办机构</view>
+            <view class="left-text">额度有权维护机构</view>
             <view class="right-text">{{orgName}}</view>
         </view>
         <view class="text-type">
@@ -41,7 +41,7 @@
 	                    <view class="text-type">审核额度：{{item.approvalLimit}}</view>
 	                    <view class="text-type">已用额度：{{item.usedLimit}}</view>
 	                    <navigator url="linelimitshow?customerID={{item.customerID}}&lineID={{item.lineID}}" class="weui-cell weui-cell_access">
-	                      <view class="weui-cell__bd weui-cell_link">查看更多</view>
+	                      <view class="weui-cell__bd weui-cell_link">查看详情</view>
                           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
 	                	</navigator>
 	                </view>
@@ -58,7 +58,7 @@
 	                    <view class="text-type">审核额度：{{item.approvalLimit}}</view>
 	                    <view class="text-type">已用额度：{{item.usedLimit}}</view>
 	                    <navigator url="orglimitshow?customerID={{item.customerID}}&orgID={{item.orgID}}&lineID={{item.lineID}}" class="weui-cell weui-cell_access">
-	                      <view class="weui-cell__bd weui-cell_link">查看更多</view>
+	                      <view class="weui-cell__bd weui-cell_link">查看详情</view>
                           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
 	                	</navigator>
 	                </view>
@@ -75,8 +75,8 @@
 	                    <view class="text-type">经办机构：{{item.orgName}}</view>
 	                    <view class="text-type">审核额度：{{item.approvalLimit}}</view>
 	                    <view class="text-type">已用额度：{{item.usedLimit}}</view>
-	                    <navigator url="busilimitshow?customerID={{item.customerID}}&orgID={{item.orgID}}&lineID={{item.lineID}}&busiID{{item.busiID}}" class="weui-cell weui-cell_access">
-	                      <view class="weui-cell__bd weui-cell_link">查看更多</view>
+	                    <navigator url="busilimitshow?customerID={{item.customerID}}&orgID={{item.orgID}}&lineID={{item.lineID}}&busiID={{item.busiID}}" class="weui-cell weui-cell_access">
+	                      <view class="weui-cell__bd weui-cell_link">查看详情</view>
                           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
 	                	</navigator>
 	                </view>

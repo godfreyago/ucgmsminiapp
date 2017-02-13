@@ -2,43 +2,53 @@ Page({
   data: {
     orgSheetHidden: true,
     lineSheetHidden: true,
+    isValidCust:false,
+    focus: true,
     custCode: '',
     custName: '',
     custCodeHolder: '请填写客户代码',
     custNameHolder: '请填写客户名称',
     organization: '请选择经办机构',
     line: '请选择业务条线',
-    organizations: [
-    {
-      _id: '1032',
-      name:'北京分行'
-    },
-    {
-      _id: '1021',
-      name: '上海分行'
-    },
-    {
-      _id: '1011',
-      name: '福州分行'
-    },
-    {
-      _id: '1034',
-      name: '重庆分行'
-    }
+    custInfo:[
+      {
+        customerId:'74959946-5',
+        customerName:"百联集团有限公司"
+      }
     ],
-    lines: [
-    {
-      _id: '1',
-      name:'企金金融'
-    },
-    {
-      _id: '2',
-      name: '金融市场'
-    },
-    {
-      _id: '3',
-      name: '零售业务'
-    }]
+    organizations: 
+    [
+      {
+        _id: '1032',
+        name:'北京分行'
+      },
+      {
+        _id: '1021',
+        name: '上海分行'
+      },
+      {
+        _id: '1011',
+        name: '福州分行'
+      },
+      {
+        _id: '1034',
+        name: '重庆分行'
+      }
+      ],
+      lines: [
+      {
+        _id: '1',
+        name:'企金金融'
+      },
+      {
+        _id: '2',
+        name: '金融市场'
+      },
+      {
+        _id: '3',
+        name: '零售业务'
+      }
+    ]
   },
   custCodeInput: function(e) {
     this.setData({
@@ -92,34 +102,37 @@ Page({
       line:strs[1]
     })
   },
-  bindCustomerIdChange: function(e) {
-    console.log('custId发送输入，携带值为', e.detail.value)
+  custCodeBlur: function(e) {
+    //console.log(e);
+    for(var i=0;i<this.data.custInfo.length;i++){
+      if(this.data.custCode==this.data.custInfo[i].customerId){
+        this.setData({
+          isValidCust:true,
+          custName: this.data.custInfo[i].customerName
+        });
+        return;
+      }
+    }
     this.setData({
-      customerId: e.detail.value
-    })
-  },
-  bindCustomerNameChange: function(e) {
-    console.log('custName发送输入，携带值为', e.detail.value)
-    this.setData({
-      customerName: e.detail.value
-    })
-  },
-  bindOrgPickerChange: function(e) {
-    console.log('orgpicker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      orgindex: e.detail.value
-    })
-  },
-  bindLinePickerChange: function(e) {
-    console.log('linepicker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      lineindex: e.detail.value
-    })
+      isValidCust:false
+    });
   },
   bindSearch: function(e) {
-    //console.log(this.data);
+    if(!this.data.isValidCust){
+      wx.showModal({
+        content: '查无客户，请重新输入客户代码！',
+        showCancel: false
+      });
+      this.setData({
+        focus:true
+      });
+      return;
+    }
     wx.navigateTo({
       url: "limitdetail?custCode=" + this.data.custCode+"&custName="+ this.data.custName+"&organizationId="+this.data.organizationId+"&lineId="+this.data.lineId
     });
+  },
+  bindCancel: function(e) {
+    wx.navigateBack();
   }
 })

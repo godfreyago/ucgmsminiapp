@@ -6,15 +6,16 @@
 	    <!--客户代码-->
 		<view class="text-type">
 			<text class="left-text">客户代码</text>
-			<input name="custCode" class="right-text" placeholder="{{custCodeHolder}}" bindinput="custCodeInput" auto-focus/>
+			<input name="custCode" class="right-text" placeholder="{{custCodeHolder}}" bindinput="custCodeInput" bindblur="custCodeBlur" focus="{{focus}}"/>
 		</view>
 		<!--客户名称-->
 		<view class="text-type">
 			<text class="left-text">客户名称</text>
-			<input name="custName" class="right-text" placeholder="{{custNameHolder}}" bindinput="custNameInput" auto-focus/>
+			<input name="custName" value="{{custName}}" class="right-text" placeholder="{{custNameHolder}}" bindinput="custNameInput"/>
 		</view>
 
 		<!--经办机构-->
+		<!--
 		<view class="text-type">
 			<text class="left-text">经办机构</text>
 			<input class="right-text" name="organization" value="{{organization}}" />	
@@ -25,7 +26,9 @@
 			</action-sheet>
 			<icon type="search" bindtap="orgSheetTap" size="20"/>			
 		</view>
+		-->
 		<!--业务条线-->
+		<!--
 		<view class="text-type">
 			<text class="left-text">业务条线</text>
 			<input class="right-text" name="line" value="{{line}}" />	
@@ -36,6 +39,7 @@
 			</action-sheet>
 			<icon type="search" bindtap="lineSheetTap" size="20"/>			
 		</view>
+		-->
 
 	</view>
 
