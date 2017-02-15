@@ -118,6 +118,16 @@ Page({
     });
   },
   bindSearch: function(e) {
+    if(!this.data.custCode){
+      wx.showModal({
+        content: '请输入客户代码！',
+        showCancel: false
+      });
+      this.setData({
+        focus:true
+      });
+      return;
+    }
     if(!this.data.isValidCust){
       wx.showModal({
         content: '查无客户，请重新输入客户代码！',
